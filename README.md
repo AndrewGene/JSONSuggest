@@ -240,6 +240,7 @@ var defaultValues:[String:String] = ["String":"\"\"", "Int": "-1", "Double":"-1.
 
 ##TODOs
 - [x] Include JSON de/serialization
+- [ ] Add NSDate support
 - [ ] Swift 3 support
 
 ## Authors
