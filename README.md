@@ -201,7 +201,7 @@ Person().findInJSON(json, complete: { (people) in
 *.findInJSON* allows you to traverse the entire JSON response back from the API and find all of the *Person* objects that it contains (even if they are within different objects entirely).
 
 #Use the JSONSuggest API
-By default, JSONSuggest is set to upload the generated classes to JSONSuggest.com so that it can create the file(s) for you so that you can easily download the files and drag-and-drop them into your project.
+By default, JSONSuggest is set to upload the generated classes to JSONSuggest.com so that it can create the file(s) for you. That way, you can easily download the files and drag-and-drop them into your project.
 
 When using the API, JSONSuggest will generate a short-lived (1 hour) link and show it to you in the console. It will look like this...
 ![alt tag](https://github.com/AndrewGene/JSONSuggest/blob/master/XcodeConsole.png)
