@@ -238,3 +238,14 @@ var defaultValues:[String:String] = ["String":"\"\"", "Int": "-1", "Double":"-1.
 ```
 *defaultValues* is what you would like each type to be set to by default.  **The values all must be represented as a String.**
 
+##TODOs
+- [x] Include JSON de/serialization
+- [ ] Swift 3 support
+
+## Authors
+
+Andrew Goodwin, andrewggoodwin@gmail.com
+
+## License
+
+JSONSuggest is available under the MIT license. See the LICENSE file for more info.
