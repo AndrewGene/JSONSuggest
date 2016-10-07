@@ -219,9 +219,13 @@ var ignoreImplementedClasses = false
 var isDebug = true
 ```
 *swiftVersion* (upcoming) will be used to determine which version of swift to print the files out in.  When swift 3 support comes.  This toggle will function.
+
 *singleFile* determines whether to split your files or generate a file called Models.swift.
+
 *includeSerialization* determines whether or not to include the de/serialization methods into your class objects
+
 *ignoreImplementedClasses* will run JSONSuggest but not print out classes that are already in your project. **IMPORTANT! IN ORDER FOR THIS TO WORK, YOUR OBJECTS MUST INHERIT FROM NSOBJECT**
+
 *isDebug* When this is set to false, JSONSuggest does not run.  This is only really used if you want to leave JSONSuggest in your app when you make it live.
 
 ```swift
