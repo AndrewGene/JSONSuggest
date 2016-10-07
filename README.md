@@ -242,6 +242,7 @@ var defaultValues:[String:String] = ["String":"\"\"", "Int": "-1", "Double":"-1.
 - [x] Include JSON de/serialization
 - [ ] Add NSDate support
 - [ ] Swift 3 support
+- [ ] Support for JAVA (if people want it)
 
 ## Authors
 
