@@ -16,7 +16,7 @@ JSONSuggest.sharedSuggest.makeSuggestions(json)
 ```
 Your models will then be generated.  You can either print them in the console or you can use JSONSuggest's API.
 
-#Let's look at an example *Person* object
+#Let's look at an example *Person* object from an API response
 ```javascript
 {
     "firstName": "John",
@@ -61,7 +61,7 @@ init?(JSON:AnyObject?){
                 self.age = age
                 self.firstName = firstName
                 self.lastName = lastName
-                self.phoneNumbers = phoneNumber.fromJSONArray(phoneNumbers)
+                self.phoneNumbers = PhoneNumber.fromJSONArray(phoneNumbers)
 
 
             }
