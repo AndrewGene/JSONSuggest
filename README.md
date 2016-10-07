@@ -5,7 +5,7 @@ The easiest way to add models and JSON de/serialization to your Swift project.
 JSONSuggest reads the responses from any API and generates models (along with code to serialize / deserialize each object).  It also provides some extra features (see "Extra Features" below).
 
 #Installation
-While you are developing, simply add JSONSuggest.swift to your project.
+While you are developing, simply add *JSONSuggest.swift* to your project.
 
 If you decide to leave the file in after you are done developing, there is an *isDebug* variable you can set to **false** so that JSONSuggest will not run when your app is in production.
 
