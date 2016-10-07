@@ -250,4 +250,4 @@ Andrew Goodwin, andrewggoodwin@gmail.com
 
 ## License
 
-JSONSuggest is available under the MIT license. See the LICENSE file for more info.
+JSONSuggest is available under the GNU GENERAL PUBLIC LICENSE. See the LICENSE file for more info.
