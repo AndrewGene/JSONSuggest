@@ -10,11 +10,15 @@ While you are developing, simply add JSONSuggest.swift to your project.
 If you decide to leave the file in after you are done developing, there is an *isDebug* variable you can set to **false** so that JSONSuggest will not run when your app is in production.
 
 #Usage
-Anywhere you are parsing JSON, simply add this line...
+1) Anywhere you are parsing JSON, simply add this line...
 ```swift
 JSONSuggest.sharedSuggest.makeSuggestions(json)
 ```
-Your models will then be generated.  You can either print them in the console or you can use JSONSuggest's API.
+2) Visit the link that prints in your Xcode console
+
+3) Drag-and-drop the files you downloaded into your project
+
+4) Find something to do with all of your free time :)
 
 #Let's look at an example *Person* object from an API response
 ```javascript
@@ -207,6 +211,26 @@ Your code will simply be printed to the console.  You can then manually create y
 
 
 #Configuration
+```swift
+var swiftVersion = "2"
+var singleFile = false
+var includeSerialization = true
+var ignoreImplementedClasses = false
+var isDebug = true
+```
+*swiftVersion* (upcoming) will be used to determine which version of swift to print the files out in.  When swift 3 support comes.  This toggle will function.
+*singleFile* determines whether to split your files or generate a file called Models.swift.
+*includeSerialization* determines whether or not to include the de/serialization methods into your class objects
+*ignoreImplementedClasses* will run JSONSuggest but not print out classes that are already in your project. **IMPORTANT! IN ORDER FOR THIS TO WORK, YOUR OBJECTS MUST INHERIT FROM NSOBJECT**
+*isDebug* When this is set to false, JSONSuggest does not run.  This is only really used if you want to leave JSONSuggest in your app when you make it live.
 
+```swift
+var deliveryMethod:DeliveryMethod = .URL //.URL or .Console
+```
+*deliveryMethod* lets you switch from using the JSONSuggest API to the Xcode Console
 
+```swift
+var defaultValues:[String:String] = ["String":"\"\"", "Int": "-1", "Double":"-1.0","Bool":"false"]
+```
+*defaultValues* is what you would like each type to be set to by default.  **The values all must be represented as a String.**
 
