@@ -191,7 +191,7 @@ func findInJSON(JSON:AnyObject, complete:((persons:[Person])->())?){
 ```swift
 Person().findInJSON(json, complete: { (people) in
      if people.count > 0{
-        //you have an array of People objects
+        //you have an array of Person objects
      }
      else{
         print("no people found")
