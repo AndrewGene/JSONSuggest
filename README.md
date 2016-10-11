@@ -14,7 +14,7 @@ If you decide to leave the file in after you are done developing, there is an *i
 ```swift
 JSONSuggest.sharedSuggest.makeSuggestions(json)
 ```
-2) Visit the link that prints in your Xcode console
+2) Find the files in your file system or visit the link that prints in your Xcode console
 
 3) Drag-and-drop the files you downloaded into your project
 
@@ -200,8 +200,14 @@ Person().findInJSON(json, complete: { (people) in
 ```
 *.findInJSON* allows you to traverse the entire JSON response back from the API and find all of the *Person* objects that it contains (even if they are within different objects entirely).
 
+#Use local save
+By default, JSONSuggest is set to save the files to your local harddrive.  Simply set the *.saveDirectory* property to the directory which you want the files to be saved.  After that, navigate to that directory and drag-and-drop the files into your project.
+
+Local save will print this message into your console...
+![alt tag](https://github.com/AndrewGene/JSONSuggest/blob/master/XcodeLocalSave.png)
+
 #Use the JSONSuggest API
-By default, JSONSuggest is set to upload the generated classes to JSONSuggest.com so that it can create the file(s) for you. That way, you can easily download the files and drag-and-drop them into your project.
+JSONSuggest is also capable of uploading the generated classes to JSONSuggest.com so that it can create the file(s) for you. That way, you or a team member can easily download the files and drag-and-drop them into your project.
 
 When using the API, JSONSuggest will generate a short-lived (1 hour) link and show it to you in the console. It will look like this...
 ![alt tag](https://github.com/AndrewGene/JSONSuggest/blob/master/XcodeConsole.png)
