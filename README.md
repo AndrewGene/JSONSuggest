@@ -257,3 +257,9 @@ Andrew Goodwin, andrewggoodwin@gmail.com
 ## License
 
 JSONSuggest is available under the GNU GENERAL PUBLIC LICENSE. See the LICENSE file for more info.
+
+##Donation
+
+If you've made it this far.  Please consider donating to help further development by clicking the link below...
+
+💰 https://cash.me/$AndrewGene
