@@ -176,7 +176,7 @@ people.toJSONString
 *.toJSONString* takes an array of *Person* objects and converts it into a String.
 
 # Extra Features
-## findInJSON##
+## findInJSON
 ```swift
 func findInJSON(JSON:AnyObject, complete:((persons:[Person])->())?){
         var persons = [Person]()
