@@ -103,7 +103,7 @@ var toJSON: [String:AnyObject] {
 person.toJSON
 ```
 *.toJSON* takes a class object and converts it into [String:AnyObject] dictionary representation.  This is commonly used when sending the object in an API call.
-###toJSONString
+### toJSONString
 ```swift
 var toJSONString: String {
         var jsonString = ""
