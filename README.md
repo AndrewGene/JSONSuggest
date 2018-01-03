@@ -206,11 +206,6 @@ By default, JSONSuggest is set to save the files to your local harddrive.  Simpl
 Local save will print this message into your console...
 ![alt tag](https://github.com/AndrewGene/JSONSuggest/blob/master/XcodeLocalSave.png)
 
-#Use the JSONSuggest API
-JSONSuggest is also capable of uploading the generated classes to JSONSuggest.com so that it can create the file(s) for you. That way, you or a team member can easily download the files and drag-and-drop them into your project.
-
-When using the API, JSONSuggest will generate a short-lived (1 hour) link and show it to you in the console. It will look like this...
-![alt tag](https://github.com/AndrewGene/JSONSuggest/blob/master/XcodeConsole.png)
 
 #Use the Xcode Console
 Your code will simply be printed to the console.  You can then manually create your model files and copy/paste the contents.
