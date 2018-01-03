@@ -1,15 +1,15 @@
 ![alt tag](https://github.com/AndrewGene/JSONSuggest/blob/master/JSONSUGGEST.png)
 The easiest way to add models and JSON de/serialization to your Swift project.
 
-#What is it
+# What is it
 JSONSuggest reads the responses from any API and generates models (along with code to serialize / deserialize each object).  It also provides some extra features (see "Extra Features" below).
 
-#Installation
+# Installation
 While you are developing, simply add *JSONSuggest.swift* to your project.
 
 If you decide to leave the file in after you are done developing, there is an *isDebug* variable you can set to **false** so that JSONSuggest will not run when your app is in production.
 
-#Usage
+# Usage
 1) Anywhere you are parsing JSON, simply add this line...
 ```swift
 JSONSuggest.sharedSuggest.makeSuggestions(json)
@@ -20,7 +20,7 @@ JSONSuggest.sharedSuggest.makeSuggestions(json)
 
 4) Find something to do with all of your free time :)
 
-#Let's look at an example *Person* object from an API response
+# Let's look at an example *Person* object from an API response
 ```javascript
 {
     "firstName": "John",
@@ -39,9 +39,9 @@ JSONSuggest.sharedSuggest.makeSuggestions(json)
    ]
 }
 ```
-##De/Serialization Features
+## De/Serialization Features
 **For a single object**
-###Optional init
+### Optional init
 ```swift
 init?(JSON:AnyObject?){
         var json = JSON
@@ -85,7 +85,7 @@ if let person = Person(JSON: json){
 }
 ```
 JSONSuggest is smart enough to look through all of the objects in your JSON response to determine what is optional.  If a property is not always present, it is made an optional. Anything that isn't optional, is added to the guard statement at the top of the *init?()*. Obviously, this won't always be perfect but it is a VERY good head start.
-###toJSON
+### toJSON
 ```swift
 var toJSON: [String:AnyObject] {
         var jsonObject = [String:AnyObject]()
@@ -125,7 +125,7 @@ person.toJSONString
 *.toJSONString* takes a class object and converts it into a String representation.  You can use this when sending an object in an API call (although much less common than .toJSON).
 
 **For an array**
-###fromJSONArray
+### fromJSONArray
 ```swift
 class func fromJSONArray(JSON:[[String:AnyObject]]) -> [Person]{
         var returnArray = [Person]()
@@ -143,7 +143,7 @@ let people = Person.fromJSONArray(json) //json is [[String:AnyObject]]
 ```
 *.fromJSONArray* takes an array of dictionaries and attempts to convert them into an array of *Person* objects. **Note**: it is a class function so you do **not** need to instantiate a *Person* object before you use it.
 
-###toJSONArray
+### toJSONArray
 ```swift
 var toJSONArray : [[String:AnyObject]]{
         var returnArray = [[String:AnyObject]]()
@@ -159,7 +159,7 @@ var toJSONArray : [[String:AnyObject]]{
 people.toJSONArray
 ```
 *.toJSONArray* takes an array of *Person* objects and converts it into an array of dictionaries ( [[String:AnyObject]] ).
-###toJSONString
+### toJSONString
 ```swift
 var toJSONString : String{
         var returnString = ""
@@ -175,8 +175,8 @@ people.toJSONString
 ```
 *.toJSONString* takes an array of *Person* objects and converts it into a String.
 
-#Extra Features
-##findInJSON##
+# Extra Features
+## findInJSON##
 ```swift
 func findInJSON(JSON:AnyObject, complete:((persons:[Person])->())?){
         var persons = [Person]()
@@ -200,18 +200,18 @@ Person().findInJSON(json, complete: { (people) in
 ```
 *.findInJSON* allows you to traverse the entire JSON response back from the API and find all of the *Person* objects that it contains (even if they are within different objects entirely).
 
-#Use local save
+# Use local save
 By default, JSONSuggest is set to save the files to your local harddrive.  Simply set the *.saveDirectory* property to the directory which you want the files to be saved.  After that, navigate to that directory and drag-and-drop the files into your project.
 
 Local save will print this message into your console...
 ![alt tag](https://github.com/AndrewGene/JSONSuggest/blob/master/XcodeLocalSave.png)
 
 
-#Use the Xcode Console
+# Use the Xcode Console
 Your code will simply be printed to the console.  You can then manually create your model files and copy/paste the contents.
 
 
-#Configuration
+# Configuration
 ```swift
 var swiftVersion = "2"
 var singleFile = false
@@ -239,7 +239,7 @@ var defaultValues:[String:String] = ["String":"\"\"", "Int": "-1", "Double":"-1.
 ```
 *defaultValues* is what you would like each type to be set to by default.  **The values all must be represented as a String.**
 
-##TODOs
+## TODOs
 - [x] Include JSON de/serialization
 - [ ] Add NSDate support
 - [ ] Swift 3 support
@@ -253,7 +253,7 @@ Andrew Goodwin, andrewggoodwin@gmail.com
 
 JSONSuggest is available under the GNU GENERAL PUBLIC LICENSE. See the LICENSE file for more info.
 
-##Donation
+## Donation
 
 If you've made it this far.  Please consider donating to help further development by clicking the link below...
 
